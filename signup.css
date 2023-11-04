@@ -14,7 +14,6 @@
 }
 
 .spotify-logo {
-    
     height: 40px;
     padding: 0px 0px 6px;
 }
@@ -37,8 +36,7 @@
     flex-direction: column;
     row-gap: 10px;
 }
-
-.Button-signup {
+.Button-login {
     box-sizing: border-box;
     font-size: 16px;
     line-height: 20px;
@@ -51,7 +49,6 @@
     border: 2px solid var(--essential-subdued, #878787);
     width: 100%;
 }
-
 .line2 {
     margin: 12px 0px 20px;
     flex: 1 1 0%;
@@ -74,7 +71,6 @@
     width: 100%;
     padding-bottom: 2px;
 }
-
 .Input {
     border: 0px;
     display: block;
@@ -106,13 +102,13 @@ label {
     line-height: 1.5rem;
 }
 
-.btn-login {
+.btn-signup {
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
 
-.btn-login-text {
+.btn-signup-text {
     background-color: #1DB954;
     border-radius: 500px;
     font-size: 14px;
@@ -123,8 +119,7 @@ label {
     font-weight: bold;
 
 }
-
-a {
+a{
     color: black;
     transition: 2ms;
 }

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="./signup.css">
+    <link rel="icon" href="./assets/favicon.png">
+</head>
+
+<body>
+    <div class="container">
+        <div class="user-interface">
+            <div class="spotify-logo">
+                <svg xmlns="http://www.w3.org/2000/svg" height="2em"
+                    viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                    <path
+                        d="M499.1 6.3c8.1 6 12.9 15.6 12.9 25.7v72V368c0 44.2-43 80-96 80s-96-35.8-96-80s43-80 96-80c11.2 0 22 1.6 32 4.6V147L192 223.8V432c0 44.2-43 80-96 80s-96-35.8-96-80s43-80 96-80c11.2 0 22 1.6 32 4.6V200 128c0-14.1 9.3-26.6 22.8-30.7l320-96c9.7-2.9 20.2-1.1 28.3 5z" />
+                </svg>
+            </div>
+        </div>
+        <div class="user-interface-container">
+            <div class="user-interface-content">
+                <div class="login-form">
+                    <div>
+                        <div class="login-input-group">
+                            <div class="Label-input">
+                                <label>Email address or username</label>
+                            </div>
+                            <input type="text" placeholder="Email address or username" autocapitalize="off"
+                                class="Input" />
+                        </div>
+                        <div class="login-input-group">
+                            <div class="Label-input">
+                                <label>Password</label>
+                            </div>
+                            <input id="password" type="password" placeholder="Password" class="Input" />
+                        </div>
+                        <div class="login-input-group">
+                            <div class="Label-input">
+                                <label>Confirm Password</label>
+                            </div>
+                            <input id="confirm-password" type="password" placeholder="Password" class="Input" />
+                        </div>
+                        <p id="error-text"></p>
+                        <a href="" class="reset-password">Forgot your password?</a>
+
+                    </div>
+                    <div class="btn-signup">
+                        <a href=""><button class="btn-signup-text">SIGN UP</button></a>
+                    </div>
+                    <hr class="line2" />
+                    <div id="log-in-section">
+                        <p class="text">
+                            Have an account?
+                        </p>
+                        <a href="login.html">
+                            <button class="Button-login">
+                                <p>LOG IN</p>
+                            </button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const passwordInput = document.querySelector('#password');
+        const confirmPasswordInput = document.querySelector('#confirm-password');
+        const errorText = document.querySelector('#error-text');
+
+        passwordInput.addEventListener('input', checkPasswordMatch);
+        confirmPasswordInput.addEventListener('input', checkPasswordMatch);
+
+        function checkPasswordMatch() {
+            const password = passwordInput.value;
+            const confirmPassword = confirmPasswordInput.value;
+            if (password === '' && confirmPassword === '') {
+                errorText.textContent = '';
+                errorText.style.color = '';
+            }
+            else if (password === confirmPassword) {
+                errorText.textContent = 'Passwords match!';
+                errorText.style.color = 'green';
+            } else {
+                errorText.textContent = 'Passwords do not match!';
+                errorText.style.color = 'red';
+            }
+        }
+    </script>
+</body>
+
+</html>
