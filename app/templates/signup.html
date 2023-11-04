@@ -2,12 +2,145 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up</title>
-    <link rel="stylesheet" href="./signup.css">
-    <link rel="icon" href="./assets/favicon.png">
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='./signup.css') }}"> -->
+    <!-- <link rel="icon" href="{{ url_for('static', filename='./favicon.png') }}"> -->
+
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            height: auto;
+            overflow-x: hidden;
+        }
+
+        .user-interface {
+            border-bottom: 1px solid rgb(217, 218, 220);
+            padding: 10px;
+            margin-bottom: 10px;
+            text-align: center;
+            width: 100%;
+        }
+
+        .spotify-logo {
+            height: 40px;
+            padding: 0px 0px 6px;
+        }
+
+        .user-interface-container {
+            flex: 3 1 0%;
+            display: flex;
+            -webkit-box-pack: center;
+            justify-content: center;
+            padding: 10px;
+        }
+
+        .user-interface-content {
+            max-width: 450px;
+            width: 100%;
+        }
+
+        .login-form {
+            display: flex;
+            flex-direction: column;
+            row-gap: 10px;
+        }
+
+        .Button-login {
+            box-sizing: border-box;
+            font-size: 16px;
+            line-height: 20px;
+            font-weight: bold;
+            background-color: transparent;
+            border-radius: 500px;
+            display: inline-block;
+            text-align: center;
+            position: relative;
+            border: 2px solid var(--essential-subdued, #878787);
+            width: 100%;
+        }
+
+        .line2 {
+            margin: 12px 0px 20px;
+            flex: 1 1 0%;
+            border-top: 1px solid rgb(217, 218, 220);
+        }
+
+        .login-input-group {
+            padding-bottom: 16px;
+        }
+
+        .Label-input {
+            box-sizing: border-box;
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 0.875rem;
+            line-height: 1.25rem;
+            -webkit-box-align: center;
+            align-items: center;
+            display: flex;
+            font-weight: bold;
+            width: 100%;
+            padding-bottom: 2px;
+        }
+
+        .Input {
+            border: 0px;
+            display: block;
+            font-size: 1rem;
+            line-height: 1.5rem;
+            width: 100%;
+            box-sizing: border-box;
+            margin-top: 0px;
+            margin-bottom: 0px;
+            border-radius: 4px;
+            padding: 14px;
+            box-shadow: inset 0 0 0 1px var(--essential-subdued, #878787);
+        }
+
+        .reset-password {
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+            align-items: center;
+        }
+
+        label {
+            cursor: default;
+        }
+
+        .text {
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            font-size: 1.12rem;
+            line-height: 1.5rem;
+        }
+
+        .btn-signup {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        .btn-signup-text {
+            background-color: #1DB954;
+            border-radius: 500px;
+            font-size: 14px;
+            width: 120px;
+            height: 50px;
+            color: black;
+            border-color: white;
+            font-weight: bold;
+
+        }
+
+        a {
+            color: black;
+            transition: 2ms;
+        }
+    </style>
+
 </head>
 
 <body>
@@ -46,7 +179,6 @@
                         </div>
                         <p id="error-text"></p>
                         <a href="" class="reset-password">Forgot your password?</a>
-
                     </div>
                     <div class="btn-signup">
                         <a href=""><button class="btn-signup-text">SIGN UP</button></a>
@@ -59,7 +191,8 @@
                         <a href="login.html">
                             <button class="Button-login">
                                 <p>LOG IN</p>
-                            </button></a>
+                            </button>
+                        </a>
                     </div>
                 </div>
             </div>
